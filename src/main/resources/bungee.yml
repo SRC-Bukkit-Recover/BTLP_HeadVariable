@@ -1,0 +1,4 @@
+name: BTLP_HeadVariable
+version: ${project.version}
+main: me.hsgamer.btlp_headvariable.HeadVariable
+depends: [BungeeTabListPlus]
