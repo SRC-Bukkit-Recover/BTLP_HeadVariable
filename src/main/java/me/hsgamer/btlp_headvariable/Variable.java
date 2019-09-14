@@ -7,6 +7,7 @@ import java.util.HashMap;
 
 public class Variable extends codecrafter47.bungeetablistplus.api.bungee.Variable {
     private int line;
+
     Variable(int line) {
         super("head_image_" + line);
         this.line = line;

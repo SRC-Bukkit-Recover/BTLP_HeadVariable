@@ -7,12 +7,15 @@ import me.hsgamer.btlp_headvariable.task.TaskManager;
 import net.md_5.bungee.api.plugin.Plugin;
 
 public final class HeadVariable extends Plugin {
+    public static final ImageChar IMAGE_CHAR = ImageChar.BLOCK;
+    public static String url;
     private static HeadVariable instance;
+    public FallbackImage fallbackImage;
     private TaskManager taskManager;
 
-    public static String url;
-    public static final ImageChar IMAGE_CHAR = ImageChar.BLOCK;
-    public FallbackImage fallbackImage;
+    public static HeadVariable getInstance() {
+        return instance;
+    }
 
     @Override
     public void onEnable() {
@@ -43,10 +46,6 @@ public final class HeadVariable extends Plugin {
         fallbackImage = null;
 
         getProxy().getPluginManager().unregisterListeners(this);
-    }
-
-    public static HeadVariable getInstance() {
-        return instance;
     }
 
     public TaskManager getTaskManager() {

@@ -35,12 +35,14 @@ public class Task implements Runnable {
 
     private URL newURL(String uuid, String name) {
         String url = HeadVariable.url
-                .replace("%uuid%" , uuid)
+                .replace("%uuid%", uuid)
                 .replace("%pname%", name);
 
         try {
             return new URL(url);
-        } catch (Exception e) { return null; }
+        } catch (Exception e) {
+            return null;
+        }
     }
 
     private BufferedImage getImage(ProxiedPlayer player) {
