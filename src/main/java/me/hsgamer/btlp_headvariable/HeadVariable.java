@@ -39,8 +39,8 @@ public final class HeadVariable extends Plugin {
     @Override
     public void onDisable() {
         instance = null;
-
         taskManager = null;
+        fallbackImage = null;
 
         getProxy().getPluginManager().unregisterListeners(this);
     }

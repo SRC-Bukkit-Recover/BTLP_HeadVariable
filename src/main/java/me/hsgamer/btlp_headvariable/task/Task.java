@@ -19,14 +19,7 @@ public class Task implements Runnable {
 
     Task(ProxiedPlayer player) {
         this.player = player;
-
-        try {
-            BufferedImage image = ImageIO.read(instance.fallbackImage.get());
-            this.imageMessage = new ImageMessage(image, imageDimensions, HeadVariable.IMAGE_CHAR.getChar());
-        } catch (Exception e) {
-            instance.getLogger().warning("Error retrieving fallback image");
-        }
-
+        imageMessage = instance.fallbackImage.get();
         currentTask = instance.getProxy().getScheduler().schedule(instance, this, 0, 5, TimeUnit.SECONDS);
     }
 

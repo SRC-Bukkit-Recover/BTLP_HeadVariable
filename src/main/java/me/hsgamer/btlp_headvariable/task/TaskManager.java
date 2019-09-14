@@ -15,7 +15,7 @@ public class TaskManager {
         tasks.remove(player);
     }
 
-    public Task getTask(ProxiedPlayer player) {
-        return tasks.get(player);
+    public HashMap<ProxiedPlayer, Task> getTasks() {
+        return tasks;
     }
 }
